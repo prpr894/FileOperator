@@ -1,7 +1,9 @@
 package com.ando.file.sample.ui
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.ando.file.sample.R
@@ -15,6 +17,7 @@ import com.ando.file.sample.ui.selector.FileSelectSingleImageActivity
 import com.ando.file.sample.ui.selector.fragment.FileSelectFragmentUsageActivity
 import com.ando.file.sample.ui.storage.MediaStoreActivity
 import com.ando.file.sample.ui.storage.StorageAccessFrameworkActivity
+
 
 @Suppress("UNUSED_PARAMETER")
 class MainActivity : AppCompatActivity() {
@@ -38,6 +41,9 @@ class MainActivity : AppCompatActivity() {
 
     //选择单张图片 (Select a single picture)
     fun caseSelectSingleImageWithCompress(view: View) {
+//        val intent: Intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+//        intent.setData(Uri.parse("package:$packageName"))
+//        startActivity(intent)
         startActivity(Intent(this, FileSelectSingleImageActivity::class.java))
     }
 
